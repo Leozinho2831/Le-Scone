@@ -1,2 +1,2 @@
 # Le-Scone
--Projeto Origamid com uso de Sass
+- Projeto Origamid com uso de Sass
