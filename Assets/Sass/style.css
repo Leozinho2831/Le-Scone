@@ -1,0 +1,418 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.main {
+  max-width: 480px;
+  margin: 2.4rem 0;
+  padding: 0 0.8rem;
+}
+@media (min-width: 900px) {
+  .main {
+    max-width: 960px;
+    margin: 5rem 5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .main {
+    max-width: 1200px;
+  }
+}
+@media (min-width: 900px) {
+  .main .main__inicio {
+    display: grid;
+    grid-template-areas: "infos capa";
+    grid-template-columns: minmax(250px, 600px) minmax(250px, 600px);
+  }
+}
+.main .main__inicio .main__logo img {
+  margin: 0 0 4rem 0;
+}
+.main .main__inicio .main__infos {
+  font-family: "PT Mono", monospace;
+  font-size: 1.2rem;
+  max-width: 320px;
+  grid-area: infos;
+}
+.main .main__inicio .main__infos div {
+  border-right: 2px solid #2a2426;
+}
+.main .main__inicio .main__infos p {
+  padding: 0.8rem 0.8rem 0.8rem 0;
+  line-height: 1.7rem;
+}
+.main .main__inicio .main__infos p:first-child {
+  border-bottom: 2px solid #2a2426;
+}
+.main .main__inicio .main__infos p span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 0 0 1.4rem;
+  border-radius: 100%;
+  background: #1ab912;
+}
+.main .main__inicio .main__infos .infos__tel {
+  font-family: "Aref Ruqaa", serif;
+  font-size: 1.2rem;
+  color: #988c77;
+  font-family: "PT Mono", monospace;
+  padding: 0;
+  margin: 0 0 2.4rem 0;
+}
+@media (min-width: 900px) {
+  .main .main__inicio .main__infos .infos__tel::after {
+    content: "////";
+    display: block;
+    margin: 5rem 0 0 0;
+    color: #2a2426;
+    font-size: 9rem;
+    letter-spacing: -2.2rem;
+  }
+}
+@media (min-width: 900px) and (min-width: 1280px) {
+  .main .main__inicio .main__infos .infos__tel::after {
+    margin: 10rem 0 0 0;
+    font-size: 13rem;
+  }
+}
+.main .main__apresentation {
+  grid-area: capa;
+}
+.main .main__apresentation img {
+  border: 0.6rem solid #cbc6b9;
+}
+@media (min-width: 900px) {
+  .main .main__apresentation img {
+    min-width: 430px;
+  }
+}
+.main .main__menu {
+  margin: 4rem 0;
+}
+@media (min-width: 1280px) {
+  .main .main__menu {
+    display: grid;
+    grid-gap: 2.8rem;
+    grid-template-areas: "titleMenu menu";
+    grid-template-columns: minmax(250px, 500px) minmax(250px, 700px);
+  }
+}
+.main .main__menu .menu__title {
+  grid-area: titleMenu;
+}
+.main .main__menu .menu__title h1 {
+  font-family: "PT Mono", monospace;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.main .main__menu .menu__title h1::after {
+  content: "";
+  display: inline-block;
+  width: 50%;
+  height: 2px;
+  margin: 0 0 4px 3.6rem;
+  background-color: #2a2426;
+}
+@media (min-width: 465px) {
+  .main .main__menu .menu__title h1::after {
+    width: 70%;
+  }
+}
+.main .main__menu .menu__options {
+  grid-area: menu;
+}
+.main .main__menu .menu__options h2 {
+  margin: 2.7rem 0;
+  font-family: "Aref Ruqaa", serif;
+  font-size: 1.5rem;
+}
+.main .main__menu .menu__options .options__principal,
+.main .main__menu .menu__options .options__entradas {
+  position: relative;
+}
+.main .main__menu .menu__options .options__principal li,
+.main .main__menu .menu__options .options__entradas li {
+  font-family: "PT Mono", monospace;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+.main .main__menu .menu__options .options__principal li span,
+.main .main__menu .menu__options .options__entradas li span {
+  font-family: "Aref Ruqaa", serif;
+  font-size: 1.2rem;
+  color: #988c77;
+  margin: 0 1rem 0 0;
+}
+.main .main__menu .menu__options .options__principal li figure,
+.main .main__menu .menu__options .options__entradas li figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2.7rem 0 0 0;
+}
+.main .main__menu .menu__options .options__principal li img,
+.main .main__menu .menu__options .options__entradas li img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  border: 0.6rem solid #cbc6b9;
+}
+@media (min-width: 465px) {
+  .main .main__menu .menu__options .options__principal li img,
+  .main .main__menu .menu__options .options__entradas li img {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+@media (min-width: 900px) {
+  .main .main__menu .menu__options .options__principal li img,
+  .main .main__menu .menu__options .options__entradas li img {
+    width: 200px;
+    height: 200px;
+  }
+}
+.main .main__contato {
+  margin: 4rem 0;
+}
+@media (min-width: 1280px) {
+  .main .main__contato {
+    display: grid;
+    grid-gap: 2.8rem;
+    grid-template-areas: "titleContato form";
+    grid-template-columns: minmax(250px, 500px) minmax(250px, 700px);
+  }
+}
+.main .main__contato .contato__title {
+  grid-area: titleContato;
+}
+.main .main__contato .contato__title h1 {
+  font-family: "PT Mono", monospace;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.main .main__contato .contato__title h1::after {
+  content: "";
+  display: inline-block;
+  width: 50%;
+  height: 2px;
+  margin: 0 0 4px 3.6rem;
+  background-color: #2a2426;
+}
+@media (min-width: 465px) {
+  .main .main__contato .contato__title h1::after {
+    width: 60%;
+  }
+}
+.main .main__contato .contato__form {
+  grid-area: form;
+  margin: 2rem 0 0 0;
+}
+@media (min-width: 1280px) {
+  .main .main__contato .contato__form {
+    margin: 0;
+  }
+}
+.main .main__contato .contato__form label {
+  font-family: "PT Mono", monospace;
+  font-size: 1.2rem;
+  margin: 0 0 5px 0;
+}
+.main .main__contato .contato__form input {
+  margin: 0 0 2.3rem 0;
+  width: 100%;
+  height: 35px;
+  padding: 5px;
+  border: 2px solid #988c77;
+  background-color: transparent;
+  line-height: 1.6rem;
+  outline: #cbc6b9;
+  font-family: "PT Mono", monospace;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.main .main__contato .contato__form input:hover, .main .main__contato .contato__form input:focus {
+  border: 2px solid #cbc6b9;
+  outline: 0;
+}
+.main .main__contato .contato__form .form__row {
+  display: flex;
+  gap: 1.5rem;
+}
+.main .main__contato .contato__form .form__row div {
+  width: 100%;
+}
+@media (min-width: 1280px) {
+  .main .main__contato .contato__form .form__row div div:first-child {
+    width: 100%;
+    max-width: 355px;
+  }
+  .main .main__contato .contato__form .form__row div div:last-child {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+.main .main__contato .contato__form textarea {
+  width: 100%;
+  height: 120px;
+  padding: 5px;
+  margin: 0 0 1rem 0;
+  border: 2px solid #988c77;
+  background-color: transparent;
+  line-height: 1.6rem;
+  font-family: "PT Mono", monospace;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.main .main__contato .contato__form textarea:hover, .main .main__contato .contato__form textarea:focus {
+  border: 2px solid #cbc6b9;
+  outline: 0;
+}
+.main .main__contato .contato__form figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem 0;
+}
+.main .main__contato .contato__form figure img {
+  border: 0.6rem solid #cbc6b9;
+}
+.main .form__contato {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.main .form__contato #enviar {
+  font-size: 1.1rem;
+  color: #988c77;
+  text-transform: uppercase;
+  transition: 0.3s;
+  box-shadow: 5px 5px 0 -2px #cbc6b9, 5px 5px 0 0 #988c77;
+}
+.main .form__contato #enviar:hover {
+  border: 2px solid #988c77;
+  box-shadow: 3px 3px 0 -2px #cbc6b9, 3px 3px 0 0 #988c77;
+}
+@media (min-width: 465px) {
+  .main .form__contato #enviar {
+    width: 200px;
+  }
+}
+@media (min-width: 900px) {
+  .main .form__contato #enviar {
+    margin: 0;
+  }
+}
+.main .form__contato div p {
+  font-size: 1.2rem;
+  font-family: "PT Mono", monospace;
+  color: #988c77;
+}
+.main .form__contato div p:first-child {
+  margin: 0 0 0.7rem 0;
+}
+.main .form__contato div p:last-child {
+  margin: 0 0 0 1.5rem;
+}
+.main .form__contato div p::after {
+  content: "////";
+  display: inline;
+  margin: 0 0 0 0.8rem;
+  letter-spacing: 0.3rem;
+}
+
+.footer {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #2a2426;
+  box-shadow: 0 0 0 10px #2a2426;
+}
+.footer p {
+  font-family: "PT Mono", monospace;
+  font-size: 1.2rem;
+  color: #edece4;
+}
+.footer figure img {
+  margin: 20px auto;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #edece4;
+}
+@media (min-width: 900px) {
+  body {
+    border: 0.6rem solid #cbc6b9;
+  }
+}
+body img {
+  max-width: 100%;
+}
+body label {
+  display: block;
+}/*# sourceMappingURL=style.css.map */

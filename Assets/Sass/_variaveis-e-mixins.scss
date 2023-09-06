@@ -1,0 +1,56 @@
+// Cores
+$bege-claro: #edece4;
+$bege-medio: #cbc6b9;
+$bege-escuro: #988c77;
+$cinza: #2a2426;
+$verde: #1ab912;
+
+// espaços
+$space: 4rem;
+$margin-mobile: 2.4rem;
+$margin-screen: 5rem;
+$padding: 0.8rem;
+$border: 0.6rem;
+$gap: 2.8rem;
+
+// Fontes
+$fonte-1: 'Aref Ruqaa', serif;
+$fonte-2: 'PT Mono', monospace;
+
+@mixin text($type-text){
+	@if $type-text == details{
+		font: {
+			family: $fonte-1;
+			size: 1.5rem;
+		}
+
+	} @else if $type-text == details-light{
+		font: {
+			family: $fonte-1;
+			size: 1.2rem;
+		}
+		color: $bege-escuro;
+	}@else if $type-text == text{
+		font: {
+			family: $fonte-2;
+			size: 1.2rem;
+		}
+	}
+}
+
+// responsive
+@mixin responsive($responsive){
+	@if $responsive == mobile{
+		@media (min-width:465px){
+			@content;
+		}
+	}@else if $responsive == tablet{
+		@media (min-width: 900px){
+			@content;
+		}
+	} @else if $responsive == screen{
+		@media (min-width: 1280px){
+			@content;
+		}
+	}
+}

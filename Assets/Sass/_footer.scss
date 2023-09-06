@@ -1,0 +1,26 @@
+@import 'variaveis-e-mixins';
+
+.footer{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    background-color: $cinza;
+    box-shadow: 0 0 0 10px $cinza;
+
+    p{
+        @include text(text);
+        color: $bege-claro;
+    }
+
+    figure{
+        img{
+            margin: 20px auto;
+        }
+    }
+}
+    
+    

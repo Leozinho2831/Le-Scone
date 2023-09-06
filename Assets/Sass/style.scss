@@ -1,0 +1,26 @@
+@import 'reset';
+@import 'variaveis-e-mixins';
+
+@import 'main';
+@import 'footer';
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $bege-claro;
+
+    @include responsive(tablet){
+        border: $border solid $bege-medio;
+    }
+
+    img{
+        max-width: 100%;
+    }
+
+    label{
+        display: block;
+    }
+}
